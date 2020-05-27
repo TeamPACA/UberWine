@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType){
-    const User = sequelize.define("User", {
-        username: {
+    const Winery = sequelize.define("Winery", {
+        wineryname: {
             type: DataType.STRING,
             allowNull: false,
             validate: {
@@ -15,15 +15,26 @@ module.exports = function(sequelize, DataType){
                 isEmail: true
             }
         },
-        password: {
+        phone: {
             type: DataType.STRING,
-            allowNull: false
+            allowNull: false,
+            validate:{
+                isNumeric: true
+            }
         },
-        usertype: {
+
+        address: {
             type: DataType.STRING,
             allowNull: false,
         },
+        postcode: {
+            type: DataType.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [4]
+            }
+        }
         
     });
-    return User;
+    return Winery;
 };
