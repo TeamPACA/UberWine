@@ -1,0 +1,4 @@
+
+DROP DATABASE IF EXISTS uberwine;
+
+CREATE DATABASE uberwine;
