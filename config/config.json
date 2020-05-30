@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "123456789",
+=======
+    "password": "???",
+>>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
     "database": "uberwine",
     "host": "127.0.0.1",
     "dialect": "mysql",
