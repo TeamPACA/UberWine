@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+#lateral{
+    border-color: blue;
+=======
+=======
+>>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
 body {
     background-image: linear-gradient(to bottom, #6A359C, #9969C7);
     height: 100vmin;
@@ -5,4 +12,8 @@ body {
 
 h1 {
     color: white;
+<<<<<<< HEAD
+>>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
+=======
+>>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
 }
