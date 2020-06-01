@@ -28,6 +28,7 @@ module.exports = function (app) {
                 phone: req.body.phone,
                 address: req.body.address,
                 postcode: req.body.postcode
+                // Need something here that associates who which User account can edit the winery details
             })
             .then(function () {
                 res.redirect(307, "/api/login");
