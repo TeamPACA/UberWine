@@ -31,5 +31,22 @@ module.exports = function(sequelize, DataType){
     
     
     });
+    
+    Wine.associate = function(models){
+        Wine.belongsTo(models.Order,{
+            foreignKey:{
+                allowNull: false
+            }
+        });
+    }
+    Wine.associate = function(models){
+        Wine.belongsTo(models.Winery,{
+            foreignKey:{
+                allowNull: false
+            }
+        });
+    };
+    
+
     return Wine
 };

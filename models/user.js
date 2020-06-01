@@ -22,8 +22,22 @@ module.exports = function(sequelize, DataType){
         usertype: {
             type: DataType.STRING,
             allowNull: false,
-        },
+        }
         
     });
+    
+    User.associate = function(models){
+        User.hasMany(models.Order,{
+            onDelete: "cascade" 
+        });
+    };
+    
+    User.associate = function(models){
+        User.hasMany(models.Event,{
+            onDelete: "cascade" 
+        });
+    };
+    
+
     return User;
 };

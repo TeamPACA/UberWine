@@ -33,8 +33,21 @@ module.exports = function(sequelize, DataType){
             validate: {
                 len: [4]
             }
-        }
-        
+        }        
     });
+    
+    Winery.associate = function(models){
+        Winery.hasMany(models.Event,{
+            onDelete: "cascade"
+        });
+    };
+    /*
+    Winery.associate = function(models){
+        Winery.hasMany(models.Wine,{
+            onDelete: "cascade"
+        });
+    };
+    */
+
     return Winery;
 };
