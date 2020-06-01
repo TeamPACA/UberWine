@@ -1,10 +1,10 @@
-module.exports = function(sequelize, DataType){
-    const Winery = sequelize.define("Winery", {
+module.exports = function (sequelize, DataType) {
+    const Wineries = sequelize.define("wineries", {
         wineryname: {
             type: DataType.STRING,
             allowNull: false,
             validate: {
-                len: [5,20]
+                len: [5, 20]
             }
         },
         email: {
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataType){
         phone: {
             type: DataType.STRING,
             allowNull: false,
-            validate:{
+            validate: {
                 isNumeric: true
             }
         },
@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataType){
                 len: [4]
             }
         }
-        
+
     });
-    return Winery;
+    return Wineries;
 };
