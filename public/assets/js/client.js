@@ -1,11 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-$(".card-r").on("click",function(){
-
-
+    $(".card-r").on("click", function () {
 
 
-});
+
+
+    });
 
 
 
