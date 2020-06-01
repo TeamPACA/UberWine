@@ -1,10 +1,10 @@
-module.exports = function(sequelize, DataType){
-    const Winery = sequelize.define("Winery", {
+module.exports = function (sequelize, DataType) {
+    const Winery = sequelize.define("wineries", {
         wineryname: {
             type: DataType.STRING,
             allowNull: false,
             validate: {
-                len: [5,20]
+                len: [5, 20]
             }
         },
         email: {
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataType){
         phone: {
             type: DataType.STRING,
             allowNull: false,
-            validate:{
+            validate: {
                 isNumeric: true
             }
         },
@@ -33,6 +33,12 @@ module.exports = function(sequelize, DataType){
             validate: {
                 len: [4]
             }
+
+        }
+
+    });
+
+
         }        
     });
     
@@ -41,13 +47,14 @@ module.exports = function(sequelize, DataType){
             onDelete: "cascade"
         });
     };
-    /*
+
     Winery.associate = function(models){
         Winery.hasMany(models.Wine,{
             onDelete: "cascade"
         });
     };
-    */
+
 
     return Winery;
+
 };

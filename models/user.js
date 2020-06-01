@@ -1,10 +1,10 @@
-module.exports = function(sequelize, DataType){
-    const User = sequelize.define("User", {
+module.exports = function (sequelize, DataType) {
+    const Users = sequelize.define("users", {
         username: {
             type: DataType.STRING,
             allowNull: false,
             validate: {
-                len: [5,20]
+                len: [5, 20]
             }
         },
         email: {
@@ -22,6 +22,12 @@ module.exports = function(sequelize, DataType){
         usertype: {
             type: DataType.STRING,
             allowNull: false,
+
+        },
+
+    });
+
+
         }
         
     });
@@ -40,4 +46,5 @@ module.exports = function(sequelize, DataType){
     
 
     return User;
+
 };

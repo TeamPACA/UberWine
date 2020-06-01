@@ -1,6 +1,6 @@
-const Winery = require("./models")
+const Wineries = require("./models")
 
-const alxWine = await Winery.create({
+Wineries.create({
     wineryname: "Alex's Winery",
     email: "alex@alex.com",
     phone: "04012121",
@@ -9,7 +9,7 @@ const alxWine = await Winery.create({
 });
 console.log("Alex's auto-generated ID:", alxWine.id);
 
-const alvWine = await Winery.create({
+Wineries.create({
     wineryname: "Alvaro's Winery",
     email: "alvar@alvaro.com",
     phone: "04045454",

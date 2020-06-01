@@ -1,27 +1,61 @@
-#Wnav
+#w-nav
 {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(102,51,51,1) 57%);
-    padding-bottom: 10px;
+    height: 70%;
   
    
    
 }
 
-#bigC{
-    border-color: 2px,blue;
+.big-c{
+
+    
+}
+
+.jumbotron-fluid {
+   
+   
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-style: unset;
+    opacity: 50%;
 
 }
 
-.PressBox {
-    border-color: 2px,blue;
+.btn-primary{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    opacity: 80%;
+    align-content: center;
 
 }
 
 
-.card-body
-{
-   border-color: 2px, blue;
+#footer{
+    background: rgb(255,255,255);
+    background: linear-gradient(20deg, rgba(255,255,255,1) 0%, rgba(102,51,51,1) 80%);
+    color:black;
+    text-align: center;
+    font-weight: bold;
+
+  
+
+}
+
+.regist{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    opacity: 80%;
+    align-content: center;
+
 }
 
 
