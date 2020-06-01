@@ -25,7 +25,7 @@ module.exports = function(sequelize, DataType){
                 allowNull: false
             }
         });
-    }
+    };
     
     Event.associate = function(models){
         Event.belongsTo(models.Winery,{
@@ -33,7 +33,7 @@ module.exports = function(sequelize, DataType){
                 allowNull: false
             } 
         });
-    }
+    };
     
 
 
