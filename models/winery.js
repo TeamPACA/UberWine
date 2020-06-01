@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataType) {
-    const Winery = sequelize.define("wineries", {
+    const Winery = sequelize.define("Winery", {
         wineryname: {
             type: DataType.STRING,
             allowNull: false,
@@ -33,13 +33,7 @@ module.exports = function (sequelize, DataType) {
             validate: {
                 len: [4]
             }
-
         }
-
-    });
-
-
-        }        
     });
     
     Winery.associate = function(models){
