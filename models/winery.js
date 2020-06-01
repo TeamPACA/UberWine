@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataType) {
-    const Wineries = sequelize.define("wineries", {
+    const Winery = sequelize.define("wineries", {
         wineryname: {
             type: DataType.STRING,
             allowNull: false,
@@ -33,8 +33,28 @@ module.exports = function (sequelize, DataType) {
             validate: {
                 len: [4]
             }
+
         }
 
     });
-    return Wineries;
+
+
+        }        
+    });
+    
+    Winery.associate = function(models){
+        Winery.hasMany(models.Event,{
+            onDelete: "cascade"
+        });
+    };
+
+    Winery.associate = function(models){
+        Winery.hasMany(models.Wine,{
+            onDelete: "cascade"
+        });
+    };
+
+
+    return Winery;
+
 };
