@@ -1,19 +1,40 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#lateral{
-    border-color: blue;
-=======
-=======
->>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
-body {
-    background-image: linear-gradient(to bottom, #6A359C, #9969C7);
-    height: 100vmin;
+#Wnav
+{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(102,51,51,1) 57%);
+    padding-bottom: 10px;
+  
+   
+   
 }
 
-h1 {
-    color: white;
-<<<<<<< HEAD
->>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
-=======
->>>>>>> a128d142a22dabd579734f18a11f11eaba4a1a63
+#bigC{
+    border-color: 2px,blue;
+
 }
+
+.PressBox {
+    border-color: 2px,blue;
+
+}
+
+
+.card-body
+{
+   border-color: 2px, blue;
+}
+
+
+
+body 
+{ 
+    background-image: url("../img/grape-BW-background-T.png"); 
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center 200px;
+    background-color: whitesmoke;
+    
+}
+
+
+
