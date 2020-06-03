@@ -8,7 +8,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/signupuser", function (req, res) {
-        db.Users.create({
+        db.User.create({
                 username: req.body.username,
                 email: req.body.email,
                 password: req.body.password
@@ -23,7 +23,7 @@ module.exports = function (app) {
 
     // WILL NEED TO CONNECT WITH CURRENTLY LOGGED IN ACCOUNT TO SET A "OWNER" FOREIGN KEY VALUE
     app.post("/api/signupwinery", function (req, res) {
-        db.Wineries.create({
+        db.Winery.create({
                 wineryname: req.body.wineryname,
                 email: req.body.email,
                 phone: req.body.phone,
@@ -39,13 +39,36 @@ module.exports = function (app) {
             });
     });
 
+
+
     // Signs user out
     app.get("/logout", function (req, res) {
         req.logout();
         res.redirect("/");
     });
 
-}
+//POST api route for adding wines into the database.
+    app.post("/api/wines",function(req,res){
+        db.Wine.create({
+            winename:req.boy.winename,
+            year:req.boy.year,
+            variety:req.boy.variety,
+            description:req.boy.description
+        }).then(function(data){
+            console.log(data);
+        });
+    });
+//GET api route to fetch all of the wines in the database.
+    app.get("/api/wines",function(req,res){
+            db.Wine.findAll({}).then
+            (function(wines) {
+                console.log(wines);
+                res.json(wines);
+            }).catch(function(err){
+                res.status(401).json(err);
+            })
+        });
+};
 // Wineries.create({
 //     wineryname: "Alex's Winery",
 //     email: "alex@alex.com",

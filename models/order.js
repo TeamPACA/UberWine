@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataType){
         }
 
     });
-    
+
     Order.associate = function(models){
         Order.belongsTo(models.User,{
             foreignKey:{
