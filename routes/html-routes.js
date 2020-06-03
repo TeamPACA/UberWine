@@ -26,7 +26,7 @@ module.exports = function (app) {
     });
 
     app.get("/registerwinery", isAuthenticated, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/????????")) // !!!!!!!!!!!!!!!!!!!!!!!!! REGISTER WINERY PAGE HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        res.sendFile(path.join(__dirname, "../public/registerwinery.html")) // !!!!!!!!!!!!!!!!!!!!!!!!! REGISTER WINERY PAGE HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     })
 
     app.get("/userpage", isAuthenticated, function (req, res) {
