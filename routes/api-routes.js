@@ -20,6 +20,7 @@ module.exports = function (app) {
                 res.status(401).json(err);
             });
     });
+
     // WILL NEED TO CONNECT WITH CURRENTLY LOGGED IN ACCOUNT TO SET A "OWNER" FOREIGN KEY VALUE
     app.post("/api/signupwinery", function (req, res) {
         db.Winery.create({
