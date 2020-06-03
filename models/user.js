@@ -22,8 +22,8 @@ module.exports = function (sequelize, DataType) {
             type: DataType.STRING,
             allowNull: false
         },
-        usertype: {
-            type: DataType.STRING,
+        isWineryOwner: {
+            type: DataType.BOOLEAN,
             allowNull: false,
 
         },
@@ -34,9 +34,13 @@ module.exports = function (sequelize, DataType) {
     User.prototype.validPassword = function(password) {
         return bcrypt.compareSync(password, this.password);
       };
+    //Apply automatic hashing of the password with bcrypt method
     User.addHook("beforeCreate", function(user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
+
+    //Set up database associates. User can have many orders and events.
+    //Will be set as a Foreign Key in both tables.
 
     User.associate = function(models){
         User.hasMany(models.Order,{
