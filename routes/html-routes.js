@@ -8,7 +8,7 @@ module.exports = function (app) {
     app.get("/", function (req, res) {
         // If the user already has an account send them to the members page (Welcome!.... etc)
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/homepage");
         }
         res.sendFile(path.join(__dirname, "../public/signup.html")); // Prompts for a login, if not logged in most things will redirect here (due to isAuthenicated)
     });
@@ -16,17 +16,17 @@ module.exports = function (app) {
     // GETS the LOGIN page where a user can sign in to an existing account
     app.get("/login", function (req, res) {
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/homepage");
         }
         res.sendFile(path.join(__dirname, "../public/login.html"));
     });
 
-    app.get("/members", isAuthenticated, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/members.html")); // The "Main" page
+    app.get("/homepage", isAuthenticated, function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/homepage.html")); // The "Main" page
     });
 
     app.get("/registerwinery", isAuthenticated, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/????????")) // !!!!!!!!!!!!!!!!!!!!!!!!! REGISTER WINERY PAGE HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        res.sendFile(path.join(__dirname, "../public/registerwinery.html")) // !!!!!!!!!!!!!!!!!!!!!!!!! REGISTER WINERY PAGE HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     })
 
     app.get("/userpage", isAuthenticated, function (req, res) {

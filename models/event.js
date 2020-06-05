@@ -34,8 +34,6 @@ module.exports = function(sequelize, DataType){
             } 
         });
     };
-    
-
 
     return Event
 };
