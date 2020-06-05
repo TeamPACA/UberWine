@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
-    "></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/signup-style.css" type="text/css" title="Default Styles" media="screen">
     
@@ -45,18 +45,23 @@
                         <form action="" method="POST" role="form">
 
                             <div class="form-group">
-                                <label for="">Username</label>
+                                <label for="">{{#each name}}</label>
                                 <input type="text" class="form-control" id="username" placeholder="">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Email</label>
+                                <label for="">{{#each email}}</label>
                                 <input type="text" class="form-control" id="email" placeholder="">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="">
+                                <label for="">{{#each password}}</label>
+                                <input type="password" class="form-control" id="age" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">{{#each Confirm Password}}</label>
+                                <input type="password" class="form-control" id="confirm-pass" placeholder="">
                             </div>
 
                         </form>
@@ -90,7 +95,7 @@
         </div>
     </div>
 
-    <script src="assets/js/signup.js" type="text/javascript"></script>
+    <script src="js/add.js" type="text/javascript"></script>
 
 </body>
 
